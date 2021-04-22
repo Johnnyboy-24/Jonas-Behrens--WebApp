@@ -1,0 +1,36 @@
+@{
+    Layout= "Layout";
+    ViewData["Title"]= "Kontakt";
+    
+}
+
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using MontiniInk.Model;
+@model RequestModel 
+
+
+<form style="margin:10px;" method="POST" asp-controller="Kontakt" asp-action="RequestHandler">
+  <div asp-validation-summary="ModelOnly"></div>
+  <div class="form-group">
+    <label asp-for="firstname" class="form-label">Vorname:</label>
+    <input  class="form-control" asp-for="firstname" value="">
+    <span asp-validation-for="firstname"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="lastname" class="form-label">Nachname:</label>
+    <input  class="form-control" asp-for="lastname" value="">
+    <span asp-validation-for="lastname"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="Idea" class="form-label">Erzähl uns ein bisschen von deiner Idee</label>
+    <textarea class="form-control" asp-for="Idea" rows="5" value="Worum geht's?"></textarea>
+    <span asp-validation-for="Idea"></span>
+  </div>
+ <div class="form-group">
+    <label asp-for="Email" class="form-label">Email:</label>
+    <input  class="form-control" asp-for="Email" value="">
+    <span asp-validation-for="Email"></span>
+  </div>
+ 
+  <button style="margin-top: 10px;" type="submit" class="btn btn-primary">Abschicken</button>
+</form>

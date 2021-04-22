@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MontiniInk.Model/1.0.0": {
+        "dependencies": {
+          "SimpleHashing.Net": "2.1.0"
+        },
+        "runtime": {
+          "MontiniInk.Model.dll": {}
+        }
+      },
+      "SimpleHashing.Net/2.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/SimpleHashing.Net.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MontiniInk.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SimpleHashing.Net/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mx9W9YjQxEP8Lma/RVbDsS0dHKV5lEb3vldWdxgvD4o625To0XtxWroNcDR8cPdtANgTTo9QKjryZzHDjbonhg==",
+      "path": "simplehashing.net/2.1.0",
+      "hashPath": "simplehashing.net.2.1.0.nupkg.sha512"
+    }
+  }
+}

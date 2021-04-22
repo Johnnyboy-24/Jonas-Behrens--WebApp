@@ -1,0 +1,118 @@
+@{
+    Layout= "Layout";
+    ViewData["Title"]= "Verwalten";
+}
+@using MontiniInk.Model;
+@using System;
+@model CalendarHelper
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<header>
+  <style type="text/css">
+
+  </style>
+</header>
+<body>
+
+    <h1 style="margin: 10px;" >
+        Termine diese Woche
+    </h1>
+    <div class="container">
+        <div class="row">
+            @{
+                for(int i=0; i<7; i++){
+                    <div class="col-sm">@Model.GetWeekday(i)</div>
+                }
+            }
+           
+        </div>
+        <div class="row">
+            
+                @for(int i=0; i<7; i++)
+                {
+                    <div class="col-sm">                    
+                        <div class="event">
+                            @if((Model.Repository.Requests.ByDate(DateTime.Today.AddDays(i))!= null) && (Model.Repository.Requests.ByDate(DateTime.Today.AddDays(i)).Handled))
+                            {
+                                <div class="event-desc">
+                                    @Model.Repository.Users.ById(Model.Repository.Requests.ByDate(DateTime.Today.AddDays(i)).UserId).firstname
+                                </div>  
+                                <div class="event-desc">
+                                    @Model.Repository.Users.ById(Model.Repository.Requests.ByDate(DateTime.Today.AddDays(i)).UserId).lastname
+                                </div> 
+                                <div>
+                                    <a href="/Admin/Reschedule/@Model.Repository.Requests.ByDate(DateTime.Today.AddDays(i)).ID">Reschedule</a>
+                                    <a href="/Admin/Cancel/@Model.Repository.Requests.ByDate(DateTime.Today.AddDays(i)).ID">Cancel</a>
+                                </div>                              
+                            }
+                            else{
+                                <div class="event-desc">
+                                    Kein Termin
+                                </div>
+                            }
+                        </div>         
+                    </div>
+                }
+           
+                 
+              
+        </div>
+    </div>
+    
+<h1 style="margin: 10px;" >Anfragen</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Vorname</th>
+      <th scope="col">Nachname</th>  
+      <th scope="col">Motiv</th>
+      <th scope="col">Datum</th>
+      <th scope="col" >Anfrage löschen?</th> 
+          
+    </tr>
+  </thead>
+  <tbody>
+     @{     
+            int u = 1;
+            foreach(var obj in Model.Repository.Requests.All()){
+                if (obj.Handled== false)
+                {
+                    <tr>
+                        <th scope="row">@u</th>
+                        <td>@Model.Repository.Users.ById(obj.UserId).firstname</td>
+                        <td>@Model.Repository.Users.ById(obj.UserId).lastname</td>  
+                        <td>@obj.Anfrage</td>  
+                        <td><form method="POST" asp-controller="Admin" asp-action="Save" asp-route-id="@obj.ID">
+                                <div asp-validation-summary="ModelOnly"></div>
+                                <div class="form-group">
+                                    <label asp-for="Date">Hier kannst du einen Termin vergeben:</label>
+                                    <input data-val="true" class="form-control" type="date" asp-for="Date" value=""/>
+                                    <span asp-validation-for="Date"></span>
+                                    <button style="margin-top: 5px;" type="submit" class="btn btn-primary">Speichern</button>
+                                
+
+                                </div>
+                            </form>      
+                        </td> 
+                        <td>
+                            <div class="form-group">
+                                <form method="POST" asp-controller="Admin" asp-action="Cancel" asp-route-id="@obj.ID">
+                                        <button style="margin: 5px;" type="submit" class="btn btn-primary">Cancel</button>
+                                </form>  
+                            </div>    
+                        </td>                                                                  
+                    </tr>
+                    u++;
+                }
+            }
+             
+        }
+   
+    
+  </tbody>
+</table> 
+
+                     
+</body>

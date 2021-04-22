@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UrfDHxJpAVXh2YuKPkEzBqYXmODU/ChQLb8n2NCZjOWC/Jxu1ww6WvdYWi/Xo6S62pk2P4ahUAp5sgF56NRzqg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\numme\\projects\\web-backends\\Jonas Behrens- WebApp\\MontiniInk.Model\\MontiniInk.Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\numme\\.nuget\\packages\\simplehashing.net\\2.1.0\\simplehashing.net.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

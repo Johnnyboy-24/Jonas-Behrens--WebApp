@@ -1,0 +1,9 @@
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\bin\Debug\netcoreapp3.1\MontiniInk.Model.deps.json
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\bin\Debug\netcoreapp3.1\MontiniInk.Model.dll
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\bin\Debug\netcoreapp3.1\MontiniInk.Model.pdb
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\obj\Debug\netcoreapp3.1\MontiniInk.Model.csprojAssemblyReference.cache
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\obj\Debug\netcoreapp3.1\MontiniInk.Model.AssemblyInfoInputs.cache
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\obj\Debug\netcoreapp3.1\MontiniInk.Model.AssemblyInfo.cs
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\obj\Debug\netcoreapp3.1\MontiniInk.Model.csproj.CoreCompileInputs.cache
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\obj\Debug\netcoreapp3.1\MontiniInk.Model.dll
+C:\Users\numme\projects\web-backends\Jonas Behrens- WebApp\MontiniInk.Model\obj\Debug\netcoreapp3.1\MontiniInk.Model.pdb

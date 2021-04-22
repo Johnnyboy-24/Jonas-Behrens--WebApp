@@ -1,0 +1,28 @@
+@{
+    Layout= "Layout";
+    ViewData["Title"]= "Neuer Post";
+    
+}
+
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using MontiniInk.Model
+@model BlogPost 
+
+<form style="margin:10px;" method="POST" asp-controller="Blog" asp-action="Post" asp-route-id="@Model.ID">
+  <div class="form-group">
+    <label asp-for="Titel" class="form-label">Titel</label>
+    <input  class="form-control" asp-for="Titel" value=@Model.Titel>
+  </div>
+  <div class="form-group">
+    <label asp-for="Content" class="form-label">Content</label>
+    <textarea class="form-control" asp-for="Content" rows="5" value="@Model.Content"></textarea>
+  </div>
+  <div>
+  <label asp-for="ImgLink" class="form-label">Falls du magst, kann noch per URL ein Bild hinzufügen:</label>
+  <input class="form-control" asp-for="ImgLink" value="@Model.ImgLink">
+  @*<input class="form-control" asp-for="ImgLink" type="file"> A possible next step is to implement an ImageRepository to upload Images instead of relying on them being stored seperately*@
+</div>
+ 
+  <button style="margin-top: 10px;" type="submit" class="btn btn-primary">Submit</button>
+</form>
+

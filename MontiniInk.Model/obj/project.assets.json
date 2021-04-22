@@ -1,0 +1,98 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SimpleHashing.Net/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SimpleHashing.Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SimpleHashing.Net.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SimpleHashing.Net/2.1.0": {
+      "sha512": "mx9W9YjQxEP8Lma/RVbDsS0dHKV5lEb3vldWdxgvD4o625To0XtxWroNcDR8cPdtANgTTo9QKjryZzHDjbonhg==",
+      "type": "package",
+      "path": "simplehashing.net/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SimpleHashing.Net.dll",
+        "simplehashing.net.2.1.0.nupkg.sha512",
+        "simplehashing.net.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "SimpleHashing.Net >= 2.1.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\numme\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\numme\\projects\\web-backends\\Jonas Behrens- WebApp\\MontiniInk.Model\\MontiniInk.Model.csproj",
+      "projectName": "MontiniInk.Model",
+      "projectPath": "C:\\Users\\numme\\projects\\web-backends\\Jonas Behrens- WebApp\\MontiniInk.Model\\MontiniInk.Model.csproj",
+      "packagesPath": "C:\\Users\\numme\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\numme\\projects\\web-backends\\Jonas Behrens- WebApp\\MontiniInk.Model\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\numme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "SimpleHashing.Net": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+@using Microsoft.AspNetCore.Http
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- Social Media Icons CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <title>@ViewData["Title"]</title>
+  <style type="text/css">
+
+  
+
+    body
+    {
+      
+      background:#FFFFF0;
+    }
+    .event
+    {
+      clear: both;
+      display: block;
+      font-size: 13px;
+      border-radius: 4px;
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      line-height: 14px;
+      background: #e4f2f2;
+      border: 1px solid #b5dbdc;
+      color: #009aaf;
+      text-decoration: none;
+    }
+
+    .event-desc
+    {
+      color: #666;
+      margin: 3px 0 7px 0;
+      text-decoration: none;	
+    }
+
+    .fa 
+    {
+      
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/Home/Index">Montini</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Kontakt">Kontakt</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        Montini Ink- Dein Tattoo-studio
+      </span>
+    </div>
+  </div>
+</nav>
+
+  <div  id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+      <div style="max-height: 600px;" style="overflow: hidden;" class="carousel-item active">
+        <img src="https://www.berlinink.de/wp-content/uploads/2018/09/homeslider_01-1.jpg" class="d-block w-100"
+          alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+      <div style="max-height: 600px;" style="overflow: hidden;" class="carousel-item">
+        <img src="https://i2.wp.com/barbertrends.me/wp-content/uploads/2020/02/shutterstock_646327681.jpg?fit=1000%2C668&ssl=1"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div style="max-height: 600px;" style="overflow: hidden;" class="carousel-item">
+        <img src="https://identity-mag.com/wp-content/uploads/2017/08/man-back-tattoos-wallpaper-5227.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+
+  @RenderBody()
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+  <footer style="margin-top: 20px;" style="width: 100%;" class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      &copy; 2020 Montini Ink 
+      &middot; <a href="/Kontakt">Kontakt</a> 
+      &middot; <a href="/Authentication">Login</a>       
+    </p>
+    @if(!((Context.Session.GetInt32("user_ID")==null)||(Context.Session.GetInt32("user_ID")==0)))
+    {
+    <p class="float-none">
+      &middot; <a href="/Blog/CreatePost">Neuen Post erstellen</a>
+      &middot; <a href="/Admin">Anfragen verwalten</a>
+      &middot; <a href="/Authentication/Logout">Logout</a>
+    </p>    
+    }
+  </footer>
+</body>
+
+
+</html>
